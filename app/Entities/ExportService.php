@@ -135,7 +135,8 @@ class ExportService
             $pdf = \SnappyPDF::loadHTML($containedHtml);
             $pdf->setOption('print-media-type', true);
         } else {
-            $pdf = \DomPDF::loadHTML($containedHtml);
+          $pdf = \DomPDF::loadHTML($containedHtml)->setPaper('letter', 'portrait');
+          $pdf->setOptions(['dpi' => 120, 'defaultFont' => 'sans-serif']);
         }
         return $pdf->output();
     }

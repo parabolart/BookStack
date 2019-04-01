@@ -35,7 +35,7 @@ body, button, input, select, label, textarea {
  * Header Styles
  */
 h1 {
-  font-size: 3.425em;
+  font-size: 1.425em;
   line-height: 1.22222222em;
   margin-top: 0.48888889em;
   margin-bottom: 0.48888889em; }
@@ -2235,7 +2235,7 @@ ul.pagination {
   width: 100%;
   max-width: 840px;
   margin: 0 auto;
-  margin-top: 48px;
+  margin-top: 0px;
   overflow-wrap: break-word; }
   .page-content.flex {
     margin-top: 16px; }

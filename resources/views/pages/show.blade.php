@@ -57,6 +57,14 @@
             <h3>@icon('attach') {{ trans('entities.pages_attachments') }}</h3>
             <div class="body">
                 @foreach($page->attachments as $attachment)
+                @if($attachment->name == 'teg.dxf')
+                  <div class="attachment">
+                    <div class="container">
+                      <div id="cad-view"></div>
+                    </div>
+                    <script src="dxf/index.js"></script>
+                  </div>
+                @endif
                     <div class="attachment">
                         <a href="{{ $attachment->getUrl() }}" @if($attachment->external) target="_blank" @endif>@icon($attachment->external ? 'export' : 'file'){{ $attachment->name }}</a>
                     </div>
